@@ -42,7 +42,8 @@ A
    - totalAppointments
 
 ### CLASS DIAGRAM
-- LINK: 
+- LINK: https://lucid.app/lucidchart/f1b8725e-70c8-479c-bd16-ba738c158bf0/edit?viewport_loc=-615%2C-511%2C2529%2C1440%2CHWEp-vi-RSFO&invitationId=inv_6cea4c66-7b7a-463d-a302-b1ca76688413
+
 
    ### CODE IMPLEMENTATION
    - LINK: 
