@@ -21,6 +21,12 @@ class Patient {
  getDetails() {
     return `Patient Name: ${this.name}, Age: ${this.age}`;
  }
+
+ // Method to update patient age
+ updateAge(newAge) {
+    this.age = newAge; 
+    return `Age for ${this.name} updated to ${this.age}`;
+ }
 }
 
 // Define Doctor Class
@@ -43,6 +49,11 @@ class Doctor {
     // Method to get doctor details
     getDetails() {
         return `Doctor Name: ${this.name}, Specialization: ${this.specialization}`;
+    }
+
+    // Method to schedule an appointment with a patient
+    scheduleAppointment(patient) {
+        return `Appointment scheduled for Patient: ${patient.name} with Dr. ${this.name}.`;
     }
 }
 
@@ -73,7 +84,13 @@ class Appointment {
         Date: ${this.date}
         Time: ${this.time}`;
     }
+
+    // Method to schedule Appointment
+    schedule() {
+       return `Appointment scheduled for ${this.patient.name} with Dr. ${this.doctor.name} on ${this.date} at ${this.time}.`; 
+    }
 }
+
 
 // Example Usage
 const patient1 = new Patient("Ada",27);
@@ -84,10 +101,15 @@ const appointment1 = new Appointment(patient1, doctor1, "2025-01-19", "02:00 PM"
 
 //Get details
 console.log(patient1.getDetails()); // Patient details
+console.log(patient1.updateAge(28)); // Age updated
 
 console.log(doctor1.getDetails()); // Doctor details
+console.log(doctor1.scheduleAppointment(patient1)); // Appointment scheduled
 
 console.log(appointment1.getDetails()); // Appointment details
+console.log(doctor1.scheduleAppointment(patient1)); 
+
+
 
 
 
